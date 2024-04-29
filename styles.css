@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+}
+body main {
+  width: min(100%, 375px);
+  overflow: hidden;
+  box-shadow: 2rem 2rem 4rem #DFDEE0;
+}
+body main .bg-main-desktop {
+  display: none;
+}
+body main .bg-card-back {
+  position: relative;
+  bottom: 13rem;
+  left: 5rem;
+  width: 286px;
+  height: 157px;
+}
+body main .bg-card-front {
+  position: relative;
+  bottom: 17.5rem;
+  left: 2rem;
+  width: 286px;
+  height: 157px;
+}
+body main .card-number-output {
+  font-size: 1.125rem;
+  position: relative;
+  bottom: 23rem;
+  left: 3rem;
+  letter-spacing: 2.2px;
+  color: white;
+}
+body main .name-on-card-output {
+  position: relative;
+  bottom: 23rem;
+  left: 3rem;
+  font-size: 0.563rem;
+  color: white;
+}
+body main .expiry-num-output {
+  font-size: 0.563rem;
+  position: relative;
+  bottom: 24.3rem;
+  left: 16rem;
+  color: white;
+}
+body main .cvc-output {
+  font-size: 0.563rem;
+  position: relative;
+  bottom: 35rem;
+  left: 20rem;
+  color: white;
+}
+body main .card-logo {
+  position: relative;
+  bottom: 34rem;
+  left: 3rem;
+  width: 54px;
+  height: 30px;
+}
+body main form {
+  margin-top: -25rem;
+  padding: 0 1rem;
+  text-align: left;
+}
+body main form label {
+  font-size: 0.75rem;
+  color: #21092F;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+}
+body main form #card-name, body main form #card-number {
+  width: 327px;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #DFDEE0;
+}
+body main form #mm {
+  width: 72px;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #DFDEE0;
+  margin-right: 5px;
+}
+body main form #yy {
+  width: 72px;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #DFDEE0;
+  margin-right: 5px;
+}
+body main form .cvc-label {
+  position: relative;
+  left: 2rem;
+  margin-right: 6rem;
+}
+body main form #cvc {
+  width: 160px;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #DFDEE0;
+}
+body main form input {
+  margin-top: 0.5rem;
+}
+body main form p {
+  font-size: 0.75rem;
+  color: red;
+}
+body main form .mm-yy-error {
+  position: relative;
+  left: 2rem;
+}
+body main form .cvc-error {
+  position: relative;
+  left: 12rem;
+  bottom: 1.8rem;
+}
+body main form button {
+  width: 327px;
+  height: 53px;
+  border-radius: 10px;
+  background-color: #21092F;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  font-size: 1.124rem;
+}
+body main .completed-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  margin-top: -300px;
+}
+body main .completed-state h1 {
+  font-size: 1.75rem;
+  color: #21092F;
+}
+body main .completed-state p {
+  color: #8F8694;
+  font-size: 1.124rem;
+}
+body main .completed-state button {
+  background-color: #21092F;
+  width: 327px;
+  height: 53px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.124rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 360px) {
+  body main {
+    width: min(100%, 360px);
+  }
+  body main form #card-name, body main form #card-number {
+    width: 315px;
+  }
+  body main form #cvc {
+    width: 145px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body main {
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .bg-main-mobile {
+    display: none;
+  }
+  body main .bg-main-desktop {
+    position: absolute;
+    display: block;
+    position: relative;
+    left: 10rem;
+  }
+  body main .bg-card-back {
+    width: 427px;
+    height: 245px;
+    bottom: -9rem;
+    left: -4rem;
+  }
+  body main .bg-card-front {
+    width: 427px;
+    height: 245px;
+    bottom: 9rem;
+    left: -37rem;
+  }
+  body main .name-on-card-output {
+    position: absolute;
+    left: 12rem;
+    bottom: 23.7rem;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+  }
+  body main .card-number-output {
+    position: absolute;
+    left: 12rem;
+    bottom: 25.5rem;
+    font-size: 1.75rem;
+    letter-spacing: 3.42px;
+  }
+  body main .expiry-num-output {
+    position: absolute;
+    left: 33rem;
+    bottom: 23.7rem;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+  }
+  body main .cvc-output {
+    position: absolute;
+    left: 37rem;
+    bottom: 11.5rem;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+  }
+  body main .card-logo {
+    position: absolute;
+    left: 12rem;
+    bottom: 33.5rem;
+    width: 84px;
+    height: 47px;
+  }
+  body main form {
+    position: relative;
+    top: 12rem;
+    right: 22rem;
+  }
+  body main form #card-name, body main form #card-number {
+    width: 381px;
+    height: 45px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  body main form #mm {
+    width: 80px;
+  }
+  body main form #yy {
+    width: 80px;
+  }
+  body main form .cvc-label {
+    margin-right: 8rem;
+  }
+  body main form #cvc {
+    width: 191px;
+  }
+  body main form button {
+    margin-top: 2rem;
+    width: 381px;
+    height: 53px;
+  }
+  body main form .card-number-error {
+    position: relative;
+    bottom: 1rem;
+  }
+  body main form .mm-yy-error {
+    bottom: 10px;
+  }
+  body main form p {
+    margin-bottom: -0.5rem;
+  }
+  body main .completed-state {
+    margin-right: 20rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

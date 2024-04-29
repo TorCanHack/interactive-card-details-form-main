@@ -1,0 +1,413 @@
+$deepViolet: #21092F;
+$lightGrey: #DFDEE0;
+$purplishGrey: #8F8694;
+
+@mixin column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+
+    @include column-center;
+    font-family: "Space Grotesk", sans-serif;
+
+    main {
+
+        width: min(100%, 375px);
+        overflow: hidden;
+        box-shadow: 2rem 2rem 4rem $lightGrey;
+       
+
+        .bg-main-desktop {
+            display: none;
+        }
+
+        .bg-card-back {
+            position: relative;
+            bottom: 13rem;
+            left: 5rem;
+            width: 286px;
+            height: 157px;
+        }
+
+        .bg-card-front {
+
+            position: relative;
+            bottom: 17.5rem;
+            left: 2rem;
+            width: 286px;
+            height: 157px;
+
+        }
+
+        .card-number-output {
+            font-size: 1.125rem;
+            position: relative;
+            bottom: 23rem;
+            left: 3rem;
+            letter-spacing: 2.2px;
+            color: white;
+        }
+
+        .name-on-card-output {
+
+            
+            position: relative;
+            bottom: 23rem;
+            left: 3rem;
+            font-size: 0.563rem;
+            color: white;
+
+        }
+
+        .expiry-num-output {
+
+            font-size: 0.563rem;
+            position: relative;
+            bottom: 24.3rem;
+            left: 16rem;
+            color: white;
+            
+        }
+
+        .cvc-output {
+
+            font-size: 0.563rem;
+            position: relative;
+            bottom: 35rem;
+            left: 20rem;
+            color: white;
+        }
+
+        .card-logo {
+
+            position: relative;
+            bottom: 34rem;
+            left: 3rem;
+            width: 54px;
+            height: 30px;
+            
+        }
+
+        form {
+
+            
+            margin-top: -25rem;
+            padding: 0 1rem;
+            text-align: left;
+
+           
+
+
+            label {
+
+                
+                font-size: 0.75rem;
+                color: $deepViolet;
+                margin-bottom: 6px;
+                letter-spacing: 2px;
+            }
+
+            #card-name, #card-number {
+                width: 327px;
+                height: 45px;
+                border-radius: 10px;
+                border: 1px solid $lightGrey;
+                
+            }
+
+            #mm {
+                
+                width: 72px;
+                height: 45px;
+                border-radius: 10px;
+                border: 1px solid $lightGrey;
+                margin-right: 5px;
+                
+            }
+
+            #yy {
+
+                
+                width: 72px;
+                height: 45px;
+                border-radius: 10px;
+                border: 1px solid $lightGrey;
+                margin-right: 5px;
+
+            }
+
+            .cvc-label {
+
+                position: relative;
+                left: 2rem;
+                margin-right: 6rem;
+            }
+
+            #cvc {
+
+                
+                width: 160px;
+                height: 45px;
+                border-radius: 10px;
+                border: 1px solid $lightGrey;
+            }
+            input {
+                margin-top: .5rem;
+            }
+
+            p {
+                font-size: 0.75rem;
+                color: red;
+            }
+
+            .mm-yy-error {
+
+                position: relative;
+                left: 2rem;
+            }
+
+            .cvc-error {
+
+                position: relative;
+                left: 12rem;
+                bottom: 1.8rem;
+            }
+
+            button {
+                width: 327px;
+                height: 53px;
+                border-radius: 10px;
+                background-color: $deepViolet;
+                color: white;
+                border: none;
+                margin-top: 10px;
+                font-size: 1.124rem;
+            }
+
+            
+
+
+
+
+        }
+
+        .completed-state {
+
+            
+            @include column-center;
+            display: none;
+            margin-top: -300px;
+
+            h1 {
+                font-size: 1.75rem;
+                color: $deepViolet;
+            }
+
+            p {
+                color: $purplishGrey;
+                font-size: 1.124rem;
+            }
+
+            button {
+
+                background-color: $deepViolet;
+                width: 327px;
+                height: 53px;
+                border: none;
+                border-radius: 10px;
+                color: white;
+                font-size: 1.124rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: 360px) {
+
+        main {
+            width: min(100%, 360px);
+
+            form {
+
+                #card-name, #card-number {
+                    width: 315px;
+                }
+
+                #cvc {
+                    width: 145px;
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 1440px) {
+
+        margin: 0;
+        padding: 0;
+
+        main {
+
+            width: 1440px;
+            height: 900px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            
+            .bg-main-mobile {
+                display: none;
+            }
+
+            .bg-main-desktop {
+
+                position: absolute;
+                display: block;
+                position: relative;
+                left: 10rem;
+            }
+
+
+            .bg-card-back {
+
+                width: 427px;
+                height: 245px;
+                bottom: -9rem;
+                left: -4rem;
+            }
+
+            .bg-card-front {
+
+                width: 427px;
+                height: 245px;
+                bottom: 9rem;
+                left: -37rem;
+            }
+
+           
+
+            .name-on-card-output {
+                position: absolute;
+                left: 12rem;
+                bottom: 23.7rem;
+                font-size: 0.875rem;
+                letter-spacing: 2px;
+            }
+
+            .card-number-output{
+                position: absolute;
+                left: 12rem;
+                bottom: 25.5rem;
+                font-size: 1.75rem;
+                letter-spacing: 3.42px;
+            }
+
+            .expiry-num-output {
+                position: absolute;
+                left: 33rem;
+                bottom: 23.7rem;
+                font-size: 0.875rem;
+                letter-spacing: 2px;
+
+            }
+
+            .cvc-output {
+
+                position: absolute;
+                left: 37rem;
+                bottom: 11.5rem;
+                font-size: 0.875rem;
+                letter-spacing: 2px;
+            }
+
+            .card-logo {
+
+                position: absolute;
+                left: 12rem;
+                bottom: 33.5rem;
+                width: 84px;
+                height: 47px;
+                
+
+            }
+
+            form {
+                position: relative;
+                top: 12rem;
+                right: 22rem;
+
+               
+
+                #card-name, #card-number{
+
+                    width: 381px;
+                    height: 45px;
+                    margin-top: .5rem;
+                    margin-bottom: 1rem;
+
+                }
+
+                #mm {
+                    width: 80px;
+
+                }
+
+                #yy {
+                    width: 80px;
+                }
+
+                .cvc-label {
+                    margin-right: 8rem;
+                }
+
+                #cvc {
+                    width: 191px;
+                }
+
+                button {
+
+                    margin-top: 2rem;
+                    width: 381px;
+                    height: 53px;
+                }
+
+                .card-number-error {
+
+                    position: relative;
+                    bottom: 1rem;
+                }
+
+                .mm-yy-error {
+
+                    bottom: 10px;
+                }
+
+                p {
+                    margin-bottom: -.5rem;
+                }
+            }
+
+            .completed-state {
+
+                margin-right: 20rem;
+            }
+
+
+           
+            
+        }
+        
+    }
+
+}
+
+
