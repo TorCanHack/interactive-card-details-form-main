@@ -258,93 +258,84 @@ body {
 
             width: 1440px;
             height: 900px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            
-            
+
             .bg-main-mobile {
                 display: none;
             }
 
             .bg-main-desktop {
 
-                position: absolute;
-                display: block;
-                position: relative;
-                left: 10rem;
-            }
+                display: inline-block;
 
-
-            .bg-card-back {
-
-                width: 427px;
-                height: 245px;
-                bottom: -9rem;
-                left: -4rem;
             }
 
             .bg-card-front {
-
-                width: 427px;
+                width: 447px;
                 height: 245px;
-                bottom: 9rem;
-                left: -37rem;
+                left: -48rem;
+                bottom: 29rem;
             }
 
-           
+            .bg-card-back {
+
+                width: 447px;
+                height: 245px;
+                left: -14rem;
+                bottom: 11.5rem;
+
+
+            }
 
             .name-on-card-output {
-                position: absolute;
-                left: 12rem;
-                bottom: 23.7rem;
+              
                 font-size: 0.875rem;
                 letter-spacing: 2px;
+                left: 12rem;
+                bottom: 38rem;
             }
 
             .card-number-output{
-                position: absolute;
                 left: 12rem;
-                bottom: 25.5rem;
+                bottom: 38rem;
                 font-size: 1.75rem;
                 letter-spacing: 3.42px;
             }
 
             .expiry-num-output {
-                position: absolute;
-                left: 33rem;
-                bottom: 23.7rem;
+              
                 font-size: 0.875rem;
                 letter-spacing: 2px;
+                left: 33rem;
+                bottom: 40rem;
 
             }
 
             .cvc-output {
 
-                position: absolute;
-                left: 37rem;
-                bottom: 11.5rem;
+            
                 font-size: 0.875rem;
                 letter-spacing: 2px;
+                left: 36rem;
+                bottom: 30rem;
             }
 
             .card-logo {
 
-                position: absolute;
-                left: 12rem;
-                bottom: 33.5rem;
                 width: 84px;
                 height: 47px;
+                left: 12rem;
+                bottom: 55rem;
                 
-
             }
 
             form {
-                position: relative;
-                top: 12rem;
-                right: 22rem;
 
+                width: 400px;
+                height: 352px;
+                position: relative;
+                left: 51rem;
+                bottom: 29.5rem;
+                
                
 
                 #card-name, #card-number{
@@ -364,13 +355,18 @@ body {
                 #yy {
                     width: 80px;
                 }
+                    
 
                 .cvc-label {
                     margin-right: 8rem;
                 }
 
                 #cvc {
-                    width: 191px;
+                    width: 185px;
+                }
+
+                input::placeholder {
+                    font-size: 1.125rem;
                 }
 
                 button {
@@ -394,20 +390,26 @@ body {
                 p {
                     margin-bottom: -.5rem;
                 }
+
+                input:hover, button:hover {
+                    cursor: pointer;
+                }
             }
 
             .completed-state {
 
-                margin-right: 20rem;
+                position: relative;
+                left: 17rem;
+                bottom: 37rem;
+
+                h1 {
+
+                    font-size: 1.75rem;
+                }
             }
 
-
-           
-            
         }
         
     }
 
 }
-
-

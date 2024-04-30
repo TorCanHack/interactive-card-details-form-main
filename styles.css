@@ -180,71 +180,61 @@ body main .completed-state button {
   body main {
     width: 1440px;
     height: 900px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
   }
   body main .bg-main-mobile {
     display: none;
   }
   body main .bg-main-desktop {
-    position: absolute;
-    display: block;
-    position: relative;
-    left: 10rem;
-  }
-  body main .bg-card-back {
-    width: 427px;
-    height: 245px;
-    bottom: -9rem;
-    left: -4rem;
+    display: inline-block;
   }
   body main .bg-card-front {
-    width: 427px;
+    width: 447px;
     height: 245px;
-    bottom: 9rem;
-    left: -37rem;
+    left: -48rem;
+    bottom: 29rem;
+  }
+  body main .bg-card-back {
+    width: 447px;
+    height: 245px;
+    left: -14rem;
+    bottom: 11.5rem;
   }
   body main .name-on-card-output {
-    position: absolute;
-    left: 12rem;
-    bottom: 23.7rem;
     font-size: 0.875rem;
     letter-spacing: 2px;
+    left: 12rem;
+    bottom: 38rem;
   }
   body main .card-number-output {
-    position: absolute;
     left: 12rem;
-    bottom: 25.5rem;
+    bottom: 38rem;
     font-size: 1.75rem;
     letter-spacing: 3.42px;
   }
   body main .expiry-num-output {
-    position: absolute;
-    left: 33rem;
-    bottom: 23.7rem;
     font-size: 0.875rem;
     letter-spacing: 2px;
+    left: 33rem;
+    bottom: 40rem;
   }
   body main .cvc-output {
-    position: absolute;
-    left: 37rem;
-    bottom: 11.5rem;
     font-size: 0.875rem;
     letter-spacing: 2px;
+    left: 36rem;
+    bottom: 30rem;
   }
   body main .card-logo {
-    position: absolute;
-    left: 12rem;
-    bottom: 33.5rem;
     width: 84px;
     height: 47px;
+    left: 12rem;
+    bottom: 55rem;
   }
   body main form {
+    width: 400px;
+    height: 352px;
     position: relative;
-    top: 12rem;
-    right: 22rem;
+    left: 51rem;
+    bottom: 29.5rem;
   }
   body main form #card-name, body main form #card-number {
     width: 381px;
@@ -262,7 +252,13 @@ body main .completed-state button {
     margin-right: 8rem;
   }
   body main form #cvc {
-    width: 191px;
+    width: 185px;
+  }
+  body main form input::-moz-placeholder {
+    font-size: 1.125rem;
+  }
+  body main form input::placeholder {
+    font-size: 1.125rem;
   }
   body main form button {
     margin-top: 2rem;
@@ -279,7 +275,15 @@ body main .completed-state button {
   body main form p {
     margin-bottom: -0.5rem;
   }
+  body main form input:hover, body main form button:hover {
+    cursor: pointer;
+  }
   body main .completed-state {
-    margin-right: 20rem;
+    position: relative;
+    left: 17rem;
+    bottom: 37rem;
+  }
+  body main .completed-state h1 {
+    font-size: 1.75rem;
   }
 }/*# sourceMappingURL=styles.css.map */
